@@ -1,1 +1,2 @@
-# lol
+# myGObot
+GO Bot
