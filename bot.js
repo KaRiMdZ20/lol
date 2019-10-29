@@ -31,7 +31,7 @@ var Canvas = require('canvas')
 
 client.on('ready', function(){
     var ms = 15000 ;
-    var setGame = [`${client.guilds.size} Server`,'invite bot | for add this bot👾 in your server',`${client.users.size} Members`,'اوامر البوت 📌 G-help | G-مساعدة','Bot By: DEX Gamer'];
+    var setGame = [''];
     var i = -1;
     var j = 0;
     setInterval(function (){
