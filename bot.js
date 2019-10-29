@@ -25,7 +25,6 @@ const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
 var Canvas = require('canvas')
-var prefix = "!";
 
 client.on('message', message => {
 
