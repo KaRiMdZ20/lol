@@ -1,30 +1,19 @@
 const Discord = require('discord.js');
-const ytdl = require('ytdl-core');
-const { Client, Util } = require('discord.js');  
-const request = require('request');
-const queue = new Map(); 
-const client = new Discord.Client(); 
-const db = require('quick.db');
-const giphy = require('giphy-api')();    
-const fs = require("fs"); 
+const fs = require('fs');
+const jimp = require('jimp');  
+const client = new Discord.Client();
 const moment = require("moment");
-const UserBlocked = new Set(); 
-const jimp = require('jimp');   
-const math = require('math-expression-evaluator'); 
-const stripIndents = require('common-tags').stripIndents;
-const figlet = require('figlet');
-const google = require('google-it'); 
-const zalgo = require('zalgolize');   
-const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
-const pretty = require('pretty-ms') 
 var Canvas = require('canvas')
-
-
+var prefix = "!";
+var dat = JSON.parse("{}");
+function forEachObject(obj, func) {
+    Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
+}
 
 client.on('ready', function(){
     var ms = 15000 ;
-    var setGame = [''];
+    var setGame = [``,'',``,'',''];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -59,20 +48,6 @@ client.on('ready', function(){
   console.log('╚[════════════]╝')
   console.log('')
   console.log('')
-});
-
-
-
-
- client.on('message', message => {
-var prefix = "!";
-var cats = ["http://palestine-kitchen.ps/wp-content/uploads/2017/12/%D9%86%D9%83%D8%AA-%D8%AF%D8%A8%D8%A7%D9%86%D8%A9.png","http://www.i7lm.com/wp-content/uploads/2017/04/136769797816.jpg","https://4.bp.blogspot.com/-p62zmDIDXmI/WKzqNt9smaI/AAAAAAAAC4Q/sW_bSIB8OaQhwOYFeplc3uzz8PBN7l3YACEw/s1600/13602501135.jpg","https://www.universemagic.com/images/2016/03/7938-2-or-1457539273.jpg","https://1.bp.blogspot.com/-yFk-FzHSyE8/WR9fmPcsCUI/AAAAAAAAE6c/AmvjLadOiLY9GiCqMLHgA121bY2RS_dCwCLcB/s1600/%25D9%2586%25D9%2583%25D8%25AA%2B%25D9%2585%25D8%25B6%25D8%25AD%25D9%2583%25D8%25A9%2B1.jpg","https://l7zaat.com/wp-content/uploads/2018/02/423.jpg","https://www.petfinder.com/wp-content/uploads/2012/11/101438745-cat-conjunctivitis-causes.jpg","http://www.shuuf.com/shof/uploads/2018/02/08/jpg/shof_97d686082bdb0a2.jpg"];
-        var args = message.content.split(" ").slice(1);
-    if(message.content.startsWith(prefix + 'gopbroezfherhtr')) {
-         var cat = new Discord.RichEmbed()
-.setImage(cats[Math.floor(Math.random() * cats.length)])
-message.channel.sendEmbed(cat);
-    }
 });
 
 
